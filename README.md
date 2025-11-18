@@ -1,1 +1,0 @@
-# The-triplet-representation-of-sparse-matrices-and-fast-transposition
