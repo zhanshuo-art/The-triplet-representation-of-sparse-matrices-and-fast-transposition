@@ -6,7 +6,6 @@ const string PATH_DeepDiveAI   = "E:\\InnovationDataset\\DeepInnovationAI\\DeepD
 const string PATH_DeepPatentAl = "E:\\InnovationDataset\\DeepInnovationAI\\DeepPatentAI.csv";
 
 const int DEEPDIVE_FIRST_N = 1000;
-// ================================================================
 
 // 三元组结构体定义
 struct Triple {
@@ -260,9 +259,7 @@ int main() {
     cout << "密集矩阵已保存: " << outDense << "\n\n";
     cout.flush();
 
-    // ================================================================
     // 5) 将矩阵转换为三元组顺序表
-    // ================================================================
     cout << "\n========== 开始三元组转换与转置 ==========\n\n";
     cout << "将矩阵转换为三元组顺序表...\n";
 
@@ -294,18 +291,11 @@ int main() {
     outputTSMatrix(A, "C:\\C++ code\\InstTechMatrix_triple.csv", paperList, ipcList);
     cout.flush();
 
-    // ================================================================
     // 6) 快速转置算法
-    // ================================================================
     cout << "\n执行快速转置算法...\n";
-    auto start_time = chrono::high_resolution_clock::now();
 
     TSMatrix AT = fastTranspose(A);
 
-    auto end_time = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end_time - start_time);
-
-    cout << "快速转置完成，耗时: " << duration.count() << " 毫秒\n";
     cout << "转置矩阵规模: " << AT.rows << " × " << AT.cols << "\n";
     cout << "非零元素个数: " << AT.nums << "\n\n";
     cout.flush();
@@ -403,3 +393,4 @@ int main() {
 
     return 0;
 }
+
